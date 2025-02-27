@@ -27,7 +27,6 @@ courier_sheet(){
         send, ^{PgUp}
         Send, {Down}
     }
-tst
 }
 ^Enter::
     courier_sheet()
