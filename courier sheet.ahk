@@ -1,6 +1,8 @@
 Enter::
-    send, {Tab}
-    send, {Enter}
-    send +{Tab}
-return
-
+{
+    SendEvent("{Tab}")
+    SendEvent("{Enter}")
+    SendEvent("{Escape}")
+    SendEvent("+{Tab}")
+    SendEvent("{Enter}")
+}
