@@ -1,1 +1,3 @@
-Already up to date.
+@echo off
+git pull
+pause
