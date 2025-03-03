@@ -1,5 +1,5 @@
 ﻿input() {
-    UserInput := InputBox('courier sheet from excel', 'Please enter a count orders.', , 200)
+    UserInput := InputBox('courier sheet from excel', 'Please enter a count orders.', , 1)
     if UserInput.Result = 'Cancel' {
         MsgBox 'CANCEL was pressed.'
     } else if !RegExMatch(UserInput.Value, '^\d+$') {
@@ -13,16 +13,17 @@
 courier_sheet() {
     number := input()
     Loop number {
-        Send '^c'
+        SendEvent '^c'
         Sleep 300
-        Send '^{PgDn}'
-        Send '^v'
-        Send '{Tab}'
-        Send '{Enter}'
-        Send '{Escape}'
-        Send '+{Tab}'
-        Send '^{PgUp}'
-        Send '{Down}'
+        SendEvent '^{PgDn}'
+        SendEvent '^v'
+        SendEvent '{Tab}'
+        SendEvent '{Enter}'
+        SendEvent '{Escape}'
+        SendEvent '+{Tab}'
+        SendEvent '{Enter}'
+        SendEvent '^{PgUp}'
+        SendEvent '{Down}'
     }
 }
 
